@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push( {
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        } );
+        var f = d.getElementsByTagName( s )[0],
+            j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore( j, f );
+    })( window, document, 'script', 'dataLayer', 'GTM-WG4BQ8P' );
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" id="view">
+    <meta name="applicable-device" content="pc">
+    <meta name="Description" content="picup.ai提供一键在线抠图,AI抠图,智能抠图,人像抠图服务，图片风格迁移，帮助设计师和PS使用者加速图片处理">
+    <meta name="Keywords" content="在线抠图,AI抠图,智能抠图,人像抠图,在线人像抠图,人物抠图,在线人物抠图,发丝抠图,一键抠图,ps抠图"/>
+    <!--  <title>AI智能抠图</title>-->
+    <title>智能人像在线抠图</title>
+    <link rel="stylesheet" href="static/public.css">
+    <link rel="icon" href="smallLogo.jpg" type="images/x-icon">
+    <!--标题栏：-->
+    <!--<link rel="icon" href="static/ball.png" type="image/x-icon">-->
+    <!--收藏夹：-->
+    <!--<link rel="shortcut icon" href="static/ball.png" type="image/x-icon">-->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement( "script" );
+            hm.src = "https://hm.baidu.com/hm.js?156c05f7319464c49127c703f9ed21df";
+            var s = document.getElementsByTagName( "script" )[0];
+            s.parentNode.insertBefore( hm, s );
+        })();
+    </script>
+</head>
+<style>
+    header.positionTop {
+        position: absolute;
+        top: -100000px;
+        font-size: 14px;
+        color: #fff;
+        line-height: 60px;
+        background-color: #303030;
+        /*background: url("static/images/back.jpg") no-repeat center;*/
+    }
+
+    header li {
+        margin: 0 25px;
+    }
+
+    header .right span {
+        display: inline-block;
+        padding: 0 15px;
+        line-height: 32px;
+        cursor: pointer;
+    }
+
+    header .right span.active {
+        border: 1px solid #a1a1a1;
+        border-radius: 16px;
+    }
+
+    header li:first-child {
+        margin-left: 0;
+        margin-right: 60px;
+    }
+
+    .content {
+        padding-bottom: 85px;
+        margin-top: 75px;
+    }
+
+    .content .leftMune {
+        width: 244px;
+    }
+
+    .content .rightBig {
+        margin-left: 244px;
+        flex: 1;
+        padding-left: 15px;
+        padding-right: 75px;
+    }
+
+    .content .rightBig .OperatorCenter {
+        /*min-width: 1024px;*/
+        padding: 80px 0 85px 0;
+        text-align: center;
+        margin: 0 auto 20px;
+        background-color: #fff;
+    }
+
+    .content .rightBig .OperatorCenter h4 {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 28px;
+    }
+
+    .content .rightBig .OperatorCenter p {
+        font-size: 18px;
+        color: #999999;
+        margin-bottom: 54px;
+    }
+
+    .content .rightBig .OperatorCenter img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .content .rightBig > div {
+        background-color: #fff;
+    }
+
+    .content .rightBig .free, .content .rightBig .efficient {
+        /*min-width: 1024px;*/
+        padding: 85px 0 80px 0;
+        text-align: center;
+        margin: 0 auto 20px;
+        line-height: 1;
+    }
+
+    .content .rightBig h3 {
+        font-size: 32px;
+        margin-bottom: 28px;
+        color: #333;
+    }
+
+    .content .rightBig p {
+        font-size: 18px;
+        color: #999999;
+    }
+
+    .content .efficient img {
+        display: block;
+        margin: 122px auto 0;
+    }
+
+    .content .rightBig .efficient div.flexs {
+        text-align: left;
+        /*justify-content: space-between;*/
+        font-size: 18px;
+        color: #333;
+        line-height: 1;
+        width: 772px;
+        padding: 0 60px;
+        margin: 0 auto;
+        margin-top: 28px;
+    }
+
+    .content .efficient .flexs p {
+        color: #333;
+    }
+
+    .content .efficient .flexs > div {
+        display: inline-block;
+        text-align: center;
+        /*margin: 0 68px 0 93px;*/
+    }
+
+    .content .efficient .flexs > div:nth-child(2) {
+        margin-left: 112px;
+    }
+
+    .content .efficient .flexs > div:nth-child(3) {
+        margin-left: 144px;
+    }
+
+    .content .efficient .flexs p:last-child {
+        font-size: 14px;
+        color: #7a7a7a;
+        margin-top: 15px;
+    }
+
+    .content .free img {
+        display: block;
+        margin: 66px auto 0;
+    }
+
+    .content .rightBig > div.problem {
+        background-color: rgba(0,0,0,0);
+        padding: 70px 0 80px;
+        color: #666;
+        line-height: 1;
+        width: 864px;
+        margin: 0 auto;
+    }
+
+    .content .problem h3 {
+        font-size: 34px;
+        margin-bottom: 58px;
+        /*font-weight: 500;*/
+        text-align: center;
+    }
+
+    .content .problem .item {
+        font-size: 16px;
+        line-height: 26px;
+        color: #333;
+        margin-bottom: 40px;
+
+    }
+
+    .content .problem .item i {
+        width: 26px;
+        border-radius: 50%;
+        background-color: #e82255;
+        text-align: center;
+        margin-right: 17px;
+        color: #fff;
+        height: 26px;
+        font-weight: 600;
+    }
+
+    .content .problem .item .Ques {
+        font-size: 16px;
+        font-weight: 600;
+        align-items: center;
+    }
+    .content .problem .item .Ques p{
+        color: #333;
+        font-size: 16px;
+    }
+
+    .content .problem .item .Res {
+        margin-top: 12px;
+        font-size: 14px;
+        color: #a4a4a4;
+        line-height: 24px;
+    }
+    .content .problem .item .Res p{
+        color: #666;
+    }
+    .content .problem .item .Res i {
+        background-color: rgba(0,0,0,0);
+    }
+    .content .problem p{
+        font-size: 14px;
+        flex: 1;
+    }
+    .content .problem a{
+        color: #21a9e8;
+    }
+</style>
+<body>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG4BQ8P"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<header class="positionTop">
+    <div class="margin flex j-b a-i first">
+        <ul class="flex">
+            <li><a href="index.html"><img src="static/images/sureLogo.png" alt=""></a></li>
+            <li class="cu"><a href="index.html">Portrait Cutout</a></li>
+            <li class="cu"><a href="product.html">More Products</a></li>
+            <li class="cu"><a href="aboutUs.html">About Us</a></li>
+            <!--            <li class="cu">登录</li>-->
+        </ul>
+        <div class="right">
+            <span><a href="userVip.html">Pricing</a></span>
+            <span class="active"><a href="loginOrRegister.html">Login/Registration</a></span>
+        </div>
+    </div>
+</header>
+<div id="app"></div>
+<div class="content drops" id="content">
+    <div class="rightBig">
+<!--        <div class="OperatorCenter">-->
+<!--            <h4>人物抠图</h4>-->
+<!--            <p>强大 & 高效 & 免费</p>-->
+<!--            <img src="static/img6.png" alt="" class="bigimg">-->
+<!--        </div>-->
+<!--        <div class="OperatorCenter">-->
+<!--            <h4>强大</h4>-->
+<!--            <p>令人惊叹的边缘细节，发丝抠图等,可用于商业用途</p>-->
+<!--            <img src="static/img7.png" alt="">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <div class="efficient">-->
+<!--                <h3>高效</h3>-->
+<!--                <p>批量处理 & AI抠图 & 一键抠图 & API集成，为您的生活节省时间</p>-->
+<!--                <img src="static/images/img81.png" alt="">-->
+<!--                <div class="flexs a-i">-->
+<!--                    <div>-->
+<!--                        <p>批量上传</p>-->
+<!--                        <p>并行处理多个图像,智能抠图</p>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <p>在线一键抠图</p>-->
+<!--                        <p>收藏网站随时使用,在线人像抠图</p>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <p>API</p>-->
+<!--                        <p>与系统无缝集成</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <div class="free">-->
+<!--                <h3>免费</h3>-->
+<!--                <p>高达1000x1000像素，免费使用，是电子商务的最佳解决方案。</p>-->
+<!--                <img src="static/images/img9.png" alt="">-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="problem">
+            <div class="margins">
+                <h3>Frequently Asked Questions</h3><!--常见问题-->
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>What is cutout / background removal?</p>
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            The subject (foreground) in the picture is separated from the background in order to remove / replace the background, use different picture effects and filter effects on the background and the subject, or insert other elements between the subject and the background such as product, text, and more. For example, the shooting of science fiction movies, such as the Avengers series, uses a lot of green screens to shoot. The purpose is to make it easy to superimpose backgrounds and special effects by removing the green background. For ordinary people, this will undoubtedly take a lot of time and energy. The development of artificial intelligence has brought you an unprecedented cutout experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>What are the application scenarios for matting / removing the background?</p><!--什么是能量-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>抠图/Cutout / Background has a large number of applications in photo processing, UI design, and visual design. 
+                            Examples include:
+                            E-commerce main image on product details page, promotion poster banner, express picture, App cover
+                            Corporate office product promotion poster, sales campaign report, employee badge, greetings cards,
+                            Offline takeaways, education, beauty, fitness, convenience stores, homestays, auto repair display stands, roll-ups, coupons
+                            Personal ID photo production, ID photo change background color, job resume, Vlog, photo album production
+                            Entertainment picture background effects, funny star photo, ghost animal material, change of attractions</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>How the artificial intelligence cutout / background removal works?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            PicUP.AI uses the most advanced artificial intelligence deep learning technology-Deep Convolutional Neural Networks, adopts a multi-stage high-throughput automatic encoding infrastructure for image semantic segmentation, and adds foreground objects that predict the image transparent channel (Alpha Matting). Image semantic segmentation is the automatic segmentation of the object area from the image by the machine and the recognition of its content. When processing an image, it is down to the pixel level, that is, the method assigns each pixel in the image to an object category. In this way, artificial intelligence can identify the subject and the background, so that they can be separated.                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>Is AI matting simple to use?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            One-click, just one-click matting, after uploading the image with one click, you can get the final matting result. The online matting tools of other websites basically need to delineate the subject and background, which consumes a lot of time, and the accuracy cannot be guaranteed. At PicUP.AI, it's super easy with one click. You don't need any professional knowledge. You don’t need know how to use photoshop (PS). And you can use our tool even if you don't understand image technology.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>Does it support batch matting?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            After logging in, you can upload in batches. It helps you save more time. Don't forget, there are buttons for batch download below the thumbnail.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>Is there an API for online portrait matting?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            Yes!<a href="docsify/#/test.md">API</a> entry here. API calls support mainstream programming languages, including command line, python, php, Java. If you have more needs, please contact us, the entrance is on the left. 
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>Is the technique of online portrait matting particularly difficult?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            Yes, everyone who has used PhotoShop knows it well, especially with flying hair, or when the colors of the background and human skin and/or clothing accessories are very similar, or there is narrow background between the arms and legs, etc.  It is tedious and time consuming for doing it well manually. Common matting methods will assign each pixel in the image to a certain object category, either black or white. However, because the portrait has hair, if you want to perform matting of the portrait, you need to remove the background and retain the translucent feeling of the hair, so that it will be more natural. That way, in the case of subsequent addition/change of background, change of color, it will blend better, rather than the feeling of a steel plate. In addition, the human body and clothing are flexible items, not like sofa chairs, and which will not deform. The posture of the human body is ever-changing, standing, sitting, cross-legged, leaning back, leaning down, characters overlapping, covering, back, side, not to mention difficult postures such as dancing and raising legs. The wearings of the human body, long sleeves, short sleeves, long skirts, short skirts, wedding dresses, headscarves, scarves, etc. makes it difficult to judge the outline of the body and clothes. Transparent hair, ever-changing postures, and flexible clothing all add dozens of times more difficulty to portrait cutouts. Because it is particularly difficult, the technological breakthrough in the field of portrait matting is also the key advantage of PicUP.AI technology.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>When will there be more product cutouts?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            We are now making addition to the hardest portrait online matting functionality: matting other general objects.  Please try the <a href="objects.html">object matting</a> link on the top. Basically, most objects do not need to be translucent, the edges are very tough and clear, and most of the items that are not deformed are rigid. The currently supported product matting categories include the following: 
+Household such as tables, chairs, sofas, bottles, pots, televisions, electronic products, etc. Animals, such as birds, cats, dogs, horses, sheep, cows, etc .
+Transportation means, such as airplanes, bicycles, boats, buses, cars, motorcycles, etc .
+Clothing: clothes, bags, jewelry, shoes, etc. 
+The category is constantly expanding. If you have any special category product needs, you can also contact us.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>How is it different from other matting methods?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            Using other magnification methods such as PS requires a lot of knowledge and adjustment of many parameters, and the time it takes is hundreds of folds. PicUP.AI can complete online matting in 3 seconds. It takes about 20 minutes for a professional designer to go to the background, which is equivalent to 1200 seconds and 400 times. For unskillful person, after cutting out, there are still obvious unnatural edges of the hair and body, such as hard segmentation, jagged edges or blurring, and noise. The working mechanism of our product is to adjust the special algorithm for the lines, colors, and dots of the picture through neural networks. Therefore, the effect of the cutout is excellent. Naturally, all colors are kept intact, and the edges of the picture don’t have glitches and ghost effects. More importantly, the transparent regions are well defined, so you can use it handily whether you want to change the background or process the background with black and white, blur, and special effects.                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>What kind of portrait is better for cutout?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            After training several millions of pictures of artificial intelligence AI, we achieved the state-of-the-art results. For general hair, posture and clothing, our tool meets the fundamental needs. However, there is still room for improvements. We will conduct more model trainings on larger scale of data. We look forward to each progress.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>What is the maximum size of an image that can be uploaded?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            在PicUP.After the official release of the PicUP.AI portrait matting service, the growth in user usage caught us off guard. In order to ensure good user experience and commercial availability, the upload resolution is currently limited to a maximum of 2000x2000 and the image file size is less than 10MB. We are considering upgrading the server so that and the higher resolution will be available in the near future. If you like it, please help us share it with your friends. The more users we have, the faster we can develop and the better we can provide.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>How fast is the cutout?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            The matting speed is currently related to the resolution. The higher the resolution, the more time it takes, most of which are within 3 seconds. In addition, if there are many users at the same time, there will be occasional queues. Please be patient and enjoy your coffee break.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>Why does the matting fail?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            Some uncommon foregrounds are currently not supported. In addition, due to the influence of the network environment and the number of users using the server at the same time, there is a small chance that the cutout failure will occur. If you encounter this situation, please try again in a few minutes.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>How do I view my matting history?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            &lt;-Please use the usage history link on the left.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>What if I want to pick more pictures?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            At the current stage, all pictures with a resolution below 500 * 500 can be downloaded for free. High-resolution pictures are available for free download for 10 times. You will need to pay for more high-resolution image downloads. In order to maintain the large expenditure of the cutout server, especially the graphics card GPU, we provide paid high-resolution image download services and APIs. After paying to upgrade your account, you can use an independent high-performance server to cut out backgrounds faster and more reliably.                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="flex Ques">
+                        <i>Q</i>
+                        <p>What will happen to my uploaded pictures?</p><!--支持哪些图像-->
+                    </div>
+                    <div class="flex Res">
+                        <i></i>
+                        <p>
+                            Please rest assured that the pictures uploaded by the user and the cutout pictures will be automatically deleted after 15 days. The link to the image address is encrypted. Unless you actively share it publicly, other people cannot view the image.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let urls = window.location.href.split( '#/' )[0]
+    let baseUrl = urls.substring( 0, urls.lastIndexOf( '/' ) )
+
+    function setWindow() {
+        let Wwidth = document.documentElement.clientWidth
+        let oDiv = document.querySelector( '.rightBig' )
+        let oDiv2 = document.querySelector( '.OperatorRight' )
+        let scales = Wwidth / 1920
+        console.log( scales )
+        document.body.transform = "transform-origin:0 0"
+        document.body.transform = "scale(" + scales + "," + scales + ")"
+        // oDiv2.style.transform="scale("+scales+","+scales+")"
+    }
+
+    function userlogin(key) {
+        let url = window.location.href
+        if (url.indexOf( 'login' ) > -1 || url.indexOf( 'Register' ) > -1) window.location.replace( baseUrl + '/loginOrRegister#/?type=' + key )
+        else window.location.href = baseUrl + '/loginOrRegister#/?type=' + key
+    }
+
+    // function backindex(){
+    //   // window.location.href=baseUrl+"/index"
+    // }
+    function userCenter() {
+        window.location.href = baseUrl + "/userCenter"
+    }
+
+    function setWindeom() {
+        let sc = document.documentElement.clientWidth / 1920;
+        let md = document.getElementById( 'view' )
+        md.setAttribute( 'content', "width=device-width,initial-scale=" + sc.toFixed( 2 ) )
+    }
+
+    setWindeom()
+    var setShow = (i) => {
+        let oDiv = document.getElementById( 'content' )
+        if (i) oDiv.style.display = 'block'
+        else oDiv.style.display = 'none'
+    }
+</script>
+</body>
+</html>
