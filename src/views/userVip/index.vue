@@ -136,7 +136,7 @@
                     this.$message({message:'You have already registered!',type:'success'})
                     return
                 }
-                    window.location.href=`${this.basrUrls}/register.html`
+                    window.location.href=`${this.basrUrls}/loginOrRegister.html#/?type=1`
             },
             userContinue(){
                 if(!getToken()) window.location.href=`loginOrRegister.html#/?type=0`

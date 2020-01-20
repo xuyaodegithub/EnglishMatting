@@ -57,7 +57,7 @@ module.exports = {
             filename: 'people.html',
             // 当使用 title 选项时，
             // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-            title: 'Character matting',
+            title: 'Intelligent portrait online matting',
             // 在这个页面中包含的块，默认情况下会包含
             // 提取出来的通用 chunk 和 vendor chunk。
             // chunks: ['chunk-vendors', 'chunk-common', 'index']
@@ -71,7 +71,7 @@ module.exports = {
             filename: 'objects.html',
             // 当使用 title 选项时，
             // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-            title: 'Object matting',
+            title: 'Object one click matting',
             // 在这个页面中包含的块，默认情况下会包含
             // 提取出来的通用 chunk 和 vendor chunk。
             // chunks: ['chunk-vendors', 'chunk-common', 'index']
@@ -136,14 +136,14 @@ module.exports = {
             entry: 'src/views/products/index.js',
             template:'public/product.html',
             filename: 'product.html',
-            title: 'More products',
+            title: 'More picup.ai products',
             // chunks: ['chunk-vendors', 'chunk-common', 'changePass']
         },
         aboutUs:{
             entry: 'src/views/aboutUs/index.js',
             template:'public/aboutUs.html',
             filename: 'aboutUs.html',
-            title: 'About us',
+            title: 'About pickup.ai',
             // chunks: ['chunk-vendors', 'chunk-common', 'changePass']
         }, freeimg:{
             entry: 'src/views/freeimg/index.js',

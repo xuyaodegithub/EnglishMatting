@@ -27,7 +27,7 @@
                     // {title:'我的能量',path:'/userCenter/user-credit'},
                     {title:'API key',path:'/userCenter/secret'},
                     // {title:'赚取学分',path:'/userCenter/earn'},
-                    {title:'Invitation code',path:'/userCenter/invitation'},
+                    // {title:'Invitation code',path:'/userCenter/invitation'},
                     {title:'Account settings',path:'/userCenter/set'},
                 ],
                 userInfo:{}

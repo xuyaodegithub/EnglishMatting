@@ -4,10 +4,10 @@
     <div v-if="mySubPlans">
 <!--      <h4>&lt;!&ndash;Subscription plan&ndash;&gt;订阅计划 - {{mySubPlans.monthRemaining}} &lt;!&ndash;points per month&ndash;&gt;每月能量</h4>-->
       <p><!--Created at-->Created: {{mySubPlans.createdAt | changeTime(1)}}</p>
-      <p><!--Free remaining-->Remaining available times: {{mySubPlans.freeRemaining+mySubPlans.monthRemaining}} <!--points-->次数</p>
+      <p><!--Free remaining-->Remaining available times: {{mySubPlans.freeRemaining+mySubPlans.monthRemaining}} <!--points-->times</p>
 <!--      <p>&lt;!&ndash;Subscription remaining&ndash;&gt;剩余充值次数：{{}} &lt;!&ndash;points&ndash;&gt;次数</p>-->
       <div class="btn flex">
-        <el-button type="primary" round><!--Upgrade <Subscription--><a href="userVip.html" style="display: block;color: #fff;">Immediate purchase</a></el-button>
+        <el-button type="primary" round><!--Upgrade <Subscription--><a href="userVip.html" style="display: block;color: #fff;">Purchase Now</a></el-button>
         <el-button type="primary" round><!--Cancel Subscription-->Cancel subscription</el-button>
       </div>
       <div class="oldUse">
